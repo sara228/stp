@@ -21,7 +21,9 @@ public class UserSignUpTestWithDDTAndExcelFile extends TestBase {
 	public Object[][] userRegisterData() throws IOException
 	{
 		// get data from Excel Reader class 
+		
 		ExcelReader ER = new ExcelReader();
+		
 		return ER.getExcelData();
 	}
 		
@@ -36,8 +38,6 @@ public class UserSignUpTestWithDDTAndExcelFile extends TestBase {
 		 
 		 UserSignUpObject.UserSignUp(FN,LN,email,password,Confirmpassword);
 	
-	
-		
 		 Assert.assertTrue(UserSignUpObject.UserAccount.getText().contains(FN));
 		
 		 UserSignUpObject.UserLogout();
